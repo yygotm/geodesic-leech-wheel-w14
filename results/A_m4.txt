@@ -1,0 +1,16 @@
+SOL m=4 spokes=1,2,5,7 rims=3,8,4,10
+SOL m=4 spokes=2,3,12,10 rims=1,5,4,7
+SOL m=4 spokes=3,5,4,6 rims=1,8,2,12
+SOL m=4 spokes=1,3,12,11 rims=2,5,4,6
+SOL m=4 spokes=1,5,12,9 rims=2,4,3,8
+SOL m=4 spokes=1,2,9,3 rims=4,7,6,8
+SOL m=4 spokes=1,3,6,5 rims=2,9,4,10
+SOL m=4 spokes=2,6,11,8 rims=1,4,3,9
+SOL m=4 spokes=1,4,13,6 rims=2,5,3,9
+SOL m=4 spokes=1,4,5,8 rims=2,7,3,11
+SOL m=4 spokes=2,3,9,10 rims=1,4,8,6
+SOL m=4 spokes=2,6,3,7 rims=1,8,4,10
+SOL m=4 spokes=1,4,12,7 rims=2,3,6,8
+SOL m=4 spokes=1,3,9,11 rims=2,4,8,5
+SOL m=4 spokes=1,2,13,5 rims=3,6,4,8
+m=4 n=5 t=14 tasks=376 nodes=376 spoke_arrangements=376 mod3_pass=133 spoke_with_rim=15 solutions=15 time=0.01s threads=16

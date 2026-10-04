@@ -1,0 +1,9 @@
+W_5: m=4 t_gp=14 m(m+3)/2=14 #A=14 A_ok=True #B=14 B_ok=True
+W_6: m=5 t_gp=20 m(m+3)/2=20 #A=20 A_ok=True #B=20 B_ok=True
+W_7: m=6 t_gp=27 m(m+3)/2=27 #A=27 A_ok=True #B=27 B_ok=True
+W_8: m=7 t_gp=35 m(m+3)/2=35 #A=35 A_ok=True #B=35 B_ok=True
+W_9: m=8 t_gp=44 m(m+3)/2=44 #A=44 A_ok=True #B=44 B_ok=True
+W_10: m=9 t_gp=54 m(m+3)/2=54 #A=54 A_ok=True #B=54 B_ok=True
+W_11: m=10 t_gp=65 m(m+3)/2=65 #A=65 A_ok=True #B=65 B_ok=True
+W_12: m=11 t_gp=77 m(m+3)/2=77 #A=77 A_ok=True #B=77 B_ok=True
+W_13: m=12 t_gp=90 m(m+3)/2=90 #A=90 A_ok=True #B=90 B_ok=True

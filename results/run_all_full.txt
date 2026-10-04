@@ -1,0 +1,19 @@
+W_5: m=4 t_gp=14 m(m+3)/2=14 #A=14 A一致=True #B=14 B一致=True
+W_6: m=5 t_gp=20 m(m+3)/2=20 #A=20 A一致=True #B=20 B一致=True
+W_7: m=6 t_gp=27 m(m+3)/2=27 #A=27 A一致=True #B=27 B一致=True
+W_8: m=7 t_gp=35 m(m+3)/2=35 #A=35 A一致=True #B=35 B一致=True
+W_9: m=8 t_gp=44 m(m+3)/2=44 #A=44 A一致=True #B=44 B一致=True
+W_10: m=9 t_gp=54 m(m+3)/2=54 #A=54 A一致=True #B=54 B一致=True
+W_11: m=10 t_gp=65 m(m+3)/2=65 #A=65 A一致=True #B=65 B一致=True
+W_12: m=11 t_gp=77 m(m+3)/2=77 #A=77 A一致=True #B=77 B一致=True
+W_13: m=12 t_gp=90 m(m+3)/2=90 #A=90 A一致=True #B=90 B一致=True
+W_5 (m=4): leaves A=376 B=376  solutions A=15 B=15  solution-set A=5d72d890af59 B=5d72d890af59  A:[verified ok=15 bad=0] B:[verified ok=15 bad=0]  OK
+W_6 (m=5): leaves A=3572 B=3572  solutions A=146 B=146  solution-set A=bfde561add0c B=bfde561add0c  A:[verified ok=146 bad=0] B:[verified ok=146 bad=0]  OK
+W_7 (m=6): leaves A=28447 B=28447  solutions A=159 B=159  solution-set A=bfb4442720e5 B=bfb4442720e5  A:[verified ok=159 bad=0] B:[verified ok=159 bad=0]  OK
+W_8 (m=7): leaves A=131758 B=131758  solutions A=477 B=477  solution-set A=cc2be7838727 B=cc2be7838727  A:[verified ok=477 bad=0] B:[verified ok=477 bad=0]  OK
+W_9 (m=8): leaves A=279822 B=279822  solutions A=1653 B=1653  solution-set A=d2a592b54379 B=d2a592b54379  A:[verified ok=1653 bad=0] B:[verified ok=1653 bad=0]  OK
+W_10 (m=9): leaves A=214668 B=214668  solutions A=319 B=319  solution-set A=07e0f4747382 B=07e0f4747382  A:[verified ok=319 bad=0] B:[verified ok=319 bad=0]  OK
+W_11 (m=10): leaves A=44021 B=44021  solutions A=27 B=27  solution-set A=4af5533d5dec B=4af5533d5dec  A:[verified ok=27 bad=0] B:[verified ok=27 bad=0]  OK
+W_12 (m=11): leaves A=2773 B=2773  solutions A=5 B=5  solution-set A=0c6e1905084d B=0c6e1905084d  A:[verified ok=5 bad=0] B:[verified ok=5 bad=0]  OK
+W_13 (m=12): leaves A=137 B=137  solutions A=1 B=1  solution-set A=502bd8e92221 B=502bd8e92221  A:[verified ok=1 bad=0] B:[verified ok=1 bad=0]  OK
+W_14 (m=13): leaves A=2 B=2  solutions A=0 B=0  solution-set A=d41d8cd98f00 B=d41d8cd98f00  A:[verified ok=0 bad=0] B:[verified ok=0 bad=0]  OK

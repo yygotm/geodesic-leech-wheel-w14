@@ -1,0 +1,2 @@
+SOL m=12 spokes=2,42,3,43,46,21,25,10,36,16,30,44 rims=1,34,50,20,9,8,6,77,4,7,15,74
+m=12 t=90 order=a tasks=55300 nodes=4348928945 spoke_leaves=137 rim_calls=137 solutions=1 time=141.08s threads=16
