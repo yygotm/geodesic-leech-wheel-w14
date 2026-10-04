@@ -1,0 +1,1 @@
+m=14 n=15 t=119 tasks=5068051 nodes=676563905417 spoke_arrangements=0 mod3_pass=0 spoke_with_rim=0 solutions=0 time=9993.46s threads=16

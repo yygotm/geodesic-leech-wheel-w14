@@ -1,0 +1,1 @@
+m=14 t=119 order=a tasks=130914 nodes=255592585974 spoke_leaves=0 rim_calls=0 solutions=0 time=9761.10s threads=16

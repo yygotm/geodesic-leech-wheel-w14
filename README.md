@@ -1,14 +1,15 @@
-# The wheel W_14 has no geodesic Leech labeling
+# The wheels W_14 and W_15 have no geodesic Leech labeling
 
-Prepared 2026/10/4 by Hirotaka Shimizu with the AI assistant Claude (see Credits).
+Prepared 2026/10/4 by Hirotaka Shimizu with the AI assistant Claude (see Credits); W_15 added 2026/10/5.
 Status: computational result, reproduced by two separately written programs. Not yet formally verified
 (no proof-checker certificate), and not yet seen by the author of the paper below.
 
 ## Claim
 
 The wheel W_14 (a hub joined to every vertex of a 13-cycle) is **not** geodesic Leech.
+Neither is W_15 (a hub joined to every vertex of a 14-cycle).
 
-If correct, this settles the first open case left in
+If correct, this settles the first two open cases left in
 
 > Junyeop Yim, *A finiteness theorem for geodesic Leech wheels*, arXiv:2609.02544v1 (2026/9/2),
 
@@ -83,6 +84,7 @@ For m = 10..13, A was also run without the sum bound and gave the same leaf coun
 | W_12 | 11 | 77 | 2773 | 5 |
 | W_13 | 12 | 90 | 137 | 1 |
 | **W_14** | **13** | **104** | **2** | **0** |
+| **W_15** | **14** | **119** | **0** | **0** |
 
 - For m ≤ 12 the two programs print the same set of solutions, and every printed solution was checked
   by recomputing all geodesics by BFS (`verify_sols.py`).
@@ -104,6 +106,16 @@ For m = 10..13, A was also run without the sum bound and gave the same leaf coun
 
   with Σ L = 1753 ≡ 1 (mod 3). Since Σ L = Σ R + Σ Q = 3 Σr, no rim sequence fits (program A rejects both by this
   test; program B, which does not use it, rejects both by exhaustive rim search).
+- **W_15:** neither program finds any leaf: no normalized spoke sequence of length 14 has its 91 values
+  S ∪ P pairwise distinct in [1, 119]. So the rims are never reached.
+  - A (with the sum bound): 6.77×10^11 nodes, 0 leaves, 0 solutions.
+  - B (nosum): 2.56×10^11 nodes, 0 leaves, 0 solutions. This count does not depend on the sum bound or the
+    mod-3 test.
+
+  Both programs ran in Docker (image `gcc:14`, 16 threads), A from 2026/10/4 19:22:49 to 22:09:22 JST
+  and B from 22:09:22 to 2026/10/5 00:52:02 JST, both with exit status 0 (`run_m14.sh`, outputs in
+  `results/m14/`). A reports 9993 s, which includes 14 minutes (19:33–19:47) when the container was paused
+  so that a timing comparison could use the whole machine. B reports 9761 s.
 
 ## Programs
 
@@ -137,7 +149,11 @@ Requirements: gcc and g++ with OpenMP, python3, and GNU coreutils (`md5sum`), e.
     sh run_all.sh            # m = 4..12 with both programs, a few minutes on 16 cores
     FULL=1 sh run_all.sh     # also m = 13 (W_14), about 35 minutes in all on 16 cores
 
-For each m it compares the leaf counts, the solution counts and the sets of printed solutions of A and B,
+W_15 (m = 14) is run by a separate script, about 5.5 hours on 16 cores; it does not compare the outputs:
+
+    sh run_m14.sh            # or: docker run -d --name w15 -v "$PWD":/w -w /w gcc:14 sh run_m14.sh
+
+For each m `run_all.sh` compares the leaf counts, the solution counts and the sets of printed solutions of A and B,
 and checks every solution with `verify_sols.py`. It also checks the published labelings (`check_certificates.py`).
 Exit status 0 iff everything agrees. Outputs go to `results/`.
 
@@ -161,7 +177,8 @@ The files `results/*_m4..12*` are from a later `sh run_all.sh` (m = 4..12, exit 
 | `verify_sols.py` | checks printed solutions by BFS geodesics |
 | `wheel_certificates_W5_W13.json` | the author's published labelings, copied unchanged from `data/` of github.com/junyeobe0315/geodesic-leech-wheels (CC BY 4.0) |
 | `run_all.sh` | reproduction script |
-| `results/` | outputs of our runs |
+| `run_m14.sh` | runs A and B for W_15 (m = 14) |
+| `results/` | outputs of our runs (`results/m14/` for W_15) |
 | `test_small.sh` | quick check of `run_all.sh` (m = 4..9, 4 threads) |
 | `LICENSE` | MIT license for the code |
 
@@ -172,8 +189,9 @@ is unchanged by the translation (checked with gcc/g++ -O3 -S).
 
 - This is an exhaustive computer search, cross-checked by two programs written in separate sessions by the same
   kind of model (Claude). It is not a proof-checked certificate (for example, no SAT/DRAT proof).
-- W_15, ..., W_40 remain open. The leaf counts drop quickly with m (137 for W_13, 2 for W_14),
+- W_16, ..., W_40 remain open. The leaf counts drop quickly with m (137 for W_13, 2 for W_14, 0 for W_15),
   but the number of search nodes of program A grows by a factor of about 8 per step.
+- For W_15, A was run only with the sum bound; the count without it comes from B alone.
 
 ## Credits
 
