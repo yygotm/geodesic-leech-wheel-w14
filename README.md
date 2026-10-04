@@ -179,7 +179,7 @@ The files `results/*_m4..12*` are from a later `sh run_all.sh` (m = 4..12, exit 
 | `run_all.sh` | reproduction script |
 | `run_m14.sh` | runs A and B for W_15 (m = 14) |
 | `results/` | outputs of our runs (`results/m14/` for W_15) |
-| `test_small.sh` | quick check of `run_all.sh` (m = 4..9, 4 threads) |
+| `test_small.sh` | quick check of `run_all.sh` (m = 4..9, 4 threads), plus a check that the split depth does not change the result for m = 4 |
 | `LICENSE` | MIT license for the code |
 
 Source comments were translated from Japanese to English on 2026/10/4; the compiled assembly of both programs
@@ -192,6 +192,9 @@ is unchanged by the translation (checked with gcc/g++ -O3 -S).
 - W_16, ..., W_40 remain open. The leaf counts drop quickly with m (137 for W_13, 2 for W_14, 0 for W_15),
   but the number of search nodes of program A grows by a factor of about 8 per step.
 - For W_15, A was run only with the sum bound; the count without it comes from B alone.
+- Program B used to accept a split depth outside 1..m; with a split depth above m it dropped the leaves found while
+  collecting tasks and reported 0 solutions (found by a GPT review on 2026-10-05). It now rejects such a value.
+  None of the recorded runs is affected: all of them use split depth 3 for B (and 4 for A, which handles any depth).
 
 ## Credits
 

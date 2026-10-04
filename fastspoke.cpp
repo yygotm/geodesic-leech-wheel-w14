@@ -182,6 +182,7 @@ int main(int argc, char **argv) {
     if (argc > 5) nosum = atoi(argv[5]);
     T = m * (m + 3) / 2;
     if (m < 4 || m > 15 || T > 126) return 2;
+    if (split < 1 || split > m) { fprintf(stderr, "split_depth must be in 1..m (leaves above the split depth would not be counted)\n"); return 2; }
     FULLM = upto(T) & ~(u128)1;
     int hub = m;
     vector<vector<pair<int, int>>> adj(m + 1);
