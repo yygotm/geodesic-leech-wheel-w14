@@ -43,7 +43,8 @@ Hence the multiset of geodesic weights is
 
 **Lemma 2 (decoupling).** S ∪ P depends only on the cyclic sequence of spokes, and R ∪ Q only on the cyclic
 sequence of rims. No geodesic uses both a spoke and a rim edge. So W_n is geodesic Leech iff there are a cyclic
-spoke sequence and a cyclic rim sequence whose value sets are disjoint and together equal {1, ..., T}, T = m(m+3)/2.
+spoke sequence and a cyclic rim sequence with S ∪ P ∪ R ∪ Q = {1, ..., T} as multisets, T = m(m+3)/2
+(so all T values are distinct).
 The rotation/reflection of one sequence relative to the other is irrelevant. Each sequence can therefore be
 normalized independently under the dihedral group:
 - spokes: s_0 = min, s_1 < s_{m−1};
@@ -131,7 +132,7 @@ and 799 s for B (nosum), with the same node, leaf and solution counts.
 
 ## How to verify
 
-Requirements: gcc and g++ with OpenMP, python3.
+Requirements: gcc and g++ with OpenMP, python3, and GNU coreutils (`md5sum`), e.g. Linux or WSL.
 
     sh run_all.sh            # m = 4..12 with both programs, a few minutes on 16 cores
     FULL=1 sh run_all.sh     # also m = 13 (W_14), about 35 minutes in all on 16 cores
